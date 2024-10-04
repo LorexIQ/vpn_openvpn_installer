@@ -8,7 +8,7 @@ print_peers() {
 }
 
 list_peers() {
-    for dir in /etc/openvpn/users/*; do
+    for dir in "$rootVPN/users"/*; do
         if [ -d "$dir" ]; then
             users_list+=("$(basename "$dir")")
         fi
